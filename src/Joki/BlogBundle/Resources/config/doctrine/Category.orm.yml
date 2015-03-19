@@ -1,0 +1,24 @@
+Joki\BlogBundle\Entity\Category:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        slug:
+            type: string
+            length: 255
+    oneToMany:
+        Post:
+            targetEntity: Joki\BlogBundle\Entity\Post
+            mappedBy: Category
+            joinColumn:
+                name: id
+                referencedColumnName: category_id
+    lifecycleCallbacks: {  }

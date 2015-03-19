@@ -1,0 +1,11 @@
+joki_blog_post:
+    resource: "@JokiBlogBundle/Resources/config/routing/post.yml"
+    prefix:   /
+
+joki_blog_category:
+    resource: "@JokiBlogBundle/Resources/config/routing/category.yml"
+    prefix:   /category
+
+joki_blog_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: JokiBlogBundle:Default:index }

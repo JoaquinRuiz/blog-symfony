@@ -1,0 +1,30 @@
+post:
+    path:     /
+    defaults: { _controller: "JokiBlogBundle:Post:index" }
+
+post_show:
+    path:     /{id}/show
+    defaults: { _controller: "JokiBlogBundle:Post:show" }
+
+post_new:
+    path:     /new
+    defaults: { _controller: "JokiBlogBundle:Post:new" }
+
+post_create:
+    path:     /create
+    defaults: { _controller: "JokiBlogBundle:Post:create" }
+    methods:  POST
+
+post_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "JokiBlogBundle:Post:edit" }
+
+post_update:
+    path:     /{id}/update
+    defaults: { _controller: "JokiBlogBundle:Post:update" }
+    methods:  [POST, PUT]
+
+post_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "JokiBlogBundle:Post:delete" }
+    methods:  [POST, DELETE]
